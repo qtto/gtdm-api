@@ -2,7 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
+<<<<<<< HEAD
 request_test.py
+=======
+>>>>>>> aac99b4bb9b8db7424ddab454bed65fc4bbb8ce2
 
 # C extensions
 *.so
@@ -87,10 +90,13 @@ celerybeat-schedule
 .venv
 venv/
 ENV/
+<<<<<<< HEAD
 Include/
 Lib/
 Scripts/
 *.cfg
+=======
+>>>>>>> aac99b4bb9b8db7424ddab454bed65fc4bbb8ce2
 
 # Spyder project settings
 .spyderproject
@@ -104,8 +110,11 @@ Scripts/
 
 # mypy
 .mypy_cache/
+<<<<<<< HEAD
 
 # keys and stuff
 *.ini
 *.json
 *.db
+=======
+>>>>>>> aac99b4bb9b8db7424ddab454bed65fc4bbb8ce2
