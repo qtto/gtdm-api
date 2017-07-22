@@ -37,6 +37,7 @@ class Type(db.Model):
     def __repr__(self):
         return '<Event Type {}>'.format(self.name)
 
+db.create_all()
 
 def auth_func(**kwargs):
     if flask.request.headers.get('X-Secret-Key', '') not in access_passwords:
