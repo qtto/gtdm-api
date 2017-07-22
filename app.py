@@ -14,8 +14,8 @@ app = flask.Flask(__name__)
 app.config['DEBUG'] = config.DEBUG
 app.config['SQLALCHEMY_DATABASE_URI'] = config.SQLALCHEMY_DATABASE_URI
 db = flask_sqlalchemy.SQLAlchemy(app)
+access_password = config.access_password
 
-access_passwords = ['ccIf5$xzAA9(AXJ(`a4R\eF~@BB3S_X8', 'Q>jL:8h>cu2k>#,2f$N~p$nHYBBFpY/T']
 
 class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True, nullable=False)
@@ -40,7 +40,7 @@ class Type(db.Model):
 db.create_all()
 
 def auth_func(**kwargs):
-    if flask.request.headers.get('X-Secret-Key', '') not in access_passwords:
+    if flask.request.headers.get('X-Secret-Key', '') != access_password:
         raise flask_restless.ProcessingException(description='Not authenticated!', code=401)
 
 
