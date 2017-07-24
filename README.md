@@ -33,3 +33,11 @@ All it needs to contain is the 'X-Secret-Key' header.
 ``` python
 requests.post("./api/event", data=json.dumps({"type": 1, "name": "Test", "location": "Location", "host": "Host", "time": 0000000000}), headers={'content-type': 'application/json', 'X-Secret-Key': ''})
 ```
+
+### Config file
+Named config.ini. Looks like this:
+
+```
+[main]
+secret = your key
+```
